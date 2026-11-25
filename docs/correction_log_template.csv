@@ -1,0 +1,2 @@
+﻿log_id,date,record_id,error_type,before_summary,after_summary,evidence,decided_by,data_version
+C-0001,2026-11-21,NJ-1597-0810-I-01,정서어 오탐(인명),인명 '안도'가 해소 범주로 잡힘,동형어 사전에 P-0420 연결 후 제외,lexicon/proper_names.csv,R1,v0.1-pilot

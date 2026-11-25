@@ -1,0 +1,6 @@
+kiwipiepy==0.25.*
+korean-lunar-calendar>=0.3
+rdflib>=7.0
+pytest>=8
+matplotlib>=3.8
+openpyxl>=3.1

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "이 데이터를 사용하면 아래와 같이 인용해 주십시오."
+title: "고전 전쟁 서사 스탠드오프 데이터: 국역 난중일기·일리아스"
+version: "v0.1-pilot"
+date-released: "2026-11-21"
+abstract: "2026. 12. 5. 추계 연합학술대회 발표 글 「고전 전쟁 서사 데이터 분석 방법 시론: 국역 난중일기·일리아스 원시 데이터의 정제에서 활용까지」의 저장소 자료(v0.1-pilot)."
+license: "CC-BY-4.0"
+authors:
+  - family-names: "Jung"
+    given-names: "Unjo"
+    alias: "정운조"
+    affiliation: "조선대학교 국제문화연구원"
+repository-code: "https://github.com/unjo88/war-narrative-standoff"
+keywords: ["Nanjungilgi", "Iliad", "stand-off annotation", "digital humanities", "emotion analysis"]

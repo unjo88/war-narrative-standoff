@@ -1,0 +1,1083 @@
+{
+ "name": "war-narrative-standoff",
+ "title": "고전 전쟁 서사 스탠드오프 데이터: 국역 난중일기·일리아스",
+ "version": "0.1.0-pilot",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0",
+   "path": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ ],
+ "resources": [
+  {
+   "name": "data-iliad-epithet_lines_book18",
+   "path": "data/iliad/epithet_lines_book18.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "witness",
+      "type": "string"
+     },
+     {
+      "name": "book",
+      "type": "integer"
+     },
+     {
+      "name": "line_in_translation",
+      "type": "integer",
+      "description": "번역본에서 센 행 번호"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-iliad-line_count_by_book",
+   "path": "data/iliad/line_count_by_book.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "book",
+      "type": "integer"
+     },
+     {
+      "name": "greek_lines_OCT",
+      "type": "integer"
+     },
+     {
+      "name": "A_lines",
+      "type": "integer"
+     },
+     {
+      "name": "B_lines",
+      "type": "integer"
+     },
+     {
+      "name": "B_minus_greek",
+      "type": "integer"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-iliad-line_index_a_cheon",
+   "path": "data/iliad/line_index_A_cheon.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "source_id",
+      "type": "string",
+      "description": "data/provenance/sources.csv의 출처 ID"
+     },
+     {
+      "name": "book",
+      "type": "integer"
+     },
+     {
+      "name": "line_in_translation",
+      "type": "integer",
+      "description": "번역본에서 센 행 번호"
+     },
+     {
+      "name": "line_canonical",
+      "type": "integer",
+      "description": "그리스어 통용 행 번호. 권별 행수가 원문과 일치하는 경우에만 기입"
+     },
+     {
+      "name": "book_page",
+      "type": "integer"
+     },
+     {
+      "name": "scan_page",
+      "type": "integer"
+     },
+     {
+      "name": "ocr_reading",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-iliad-line_index_b_lee",
+   "path": "data/iliad/line_index_B_lee.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "source_id",
+      "type": "string",
+      "description": "data/provenance/sources.csv의 출처 ID"
+     },
+     {
+      "name": "book",
+      "type": "integer"
+     },
+     {
+      "name": "line_in_translation",
+      "type": "integer",
+      "description": "번역본에서 센 행 번호"
+     },
+     {
+      "name": "line_canonical",
+      "type": "integer",
+      "description": "그리스어 통용 행 번호. 권별 행수가 원문과 일치하는 경우에만 기입"
+     },
+     {
+      "name": "book_page",
+      "type": "integer"
+     },
+     {
+      "name": "scan_page",
+      "type": "integer"
+     },
+     {
+      "name": "ocr_reading",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-nanjung-entries_index",
+   "path": "data/nanjung/entries_index.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "source_id",
+      "type": "string",
+      "description": "data/provenance/sources.csv의 출처 ID"
+     },
+     {
+      "name": "section",
+      "type": "string"
+     },
+     {
+      "name": "witness_label",
+      "type": "string",
+      "description": "사람이 읽는 증언 라벨(Ⅰ/Ⅱ)"
+     },
+     {
+      "name": "year_lunar",
+      "type": "integer"
+     },
+     {
+      "name": "year_ganzhi",
+      "type": "string"
+     },
+     {
+      "name": "leap",
+      "type": "string"
+     },
+     {
+      "name": "month",
+      "type": "integer"
+     },
+     {
+      "name": "day",
+      "type": "integer"
+     },
+     {
+      "name": "day_ganzhi",
+      "type": "string"
+     },
+     {
+      "name": "day_ganzhi_hanja",
+      "type": "string"
+     },
+     {
+      "name": "solar_date_kasi",
+      "type": "string",
+      "description": "양력 환산(ISO 8601). 한국천문연구원 역법 데이터 기반 korean-lunar-calendar 변환값"
+     },
+     {
+      "name": "book_page",
+      "type": "integer"
+     },
+     {
+      "name": "scan_page",
+      "type": "integer"
+     },
+     {
+      "name": "ocr_reading",
+      "type": "string"
+     },
+     {
+      "name": "hangul_chars",
+      "type": "integer",
+      "description": "항목 본문의 한글 글자 수(대조용)"
+     },
+     {
+      "name": "simhash64",
+      "type": "string",
+      "description": "항목 본문의 64비트 SimHash 지문(본문 복원 불가, 대조용)"
+     },
+     {
+      "name": "base_text",
+      "type": "string",
+      "description": "날짜별 저본(초고본·일기초·전서본). 전체 구축에서 기입"
+     },
+     {
+      "name": "alignment",
+      "type": "string",
+      "description": "정렬 유형. 전체 구축에서 기입"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-nanjung-overlap_1597_i_ii",
+   "path": "data/nanjung/overlap_1597_I_II.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "date_lunar",
+      "type": "string"
+     },
+     {
+      "name": "record_id_I",
+      "type": "string"
+     },
+     {
+      "name": "record_id_II",
+      "type": "string"
+     },
+     {
+      "name": "alignment",
+      "type": "string",
+      "description": "정렬 유형. 전체 구축에서 기입"
+     },
+     {
+      "name": "eojeol_I",
+      "type": "integer"
+     },
+     {
+      "name": "eojeol_II",
+      "type": "integer"
+     },
+     {
+      "name": "emo_v1_I",
+      "type": "integer"
+     },
+     {
+      "name": "emo_v1_II",
+      "type": "integer"
+     },
+     {
+      "name": "density_I",
+      "type": "number"
+     },
+     {
+      "name": "density_II",
+      "type": "number"
+     },
+     {
+      "name": "top_category_I",
+      "type": "string"
+     },
+     {
+      "name": "top_category_II",
+      "type": "string"
+     },
+     {
+      "name": "jaccard_lemmas",
+      "type": "number",
+      "description": "두 기록 표제어 집합의 자카드 계수(날짜 표기 제외, 날씨 기록 포함)"
+     },
+     {
+      "name": "note",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-nanjung-pilot_1597_records",
+   "path": "data/nanjung/pilot_1597_records.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "section",
+      "type": "string"
+     },
+     {
+      "name": "date_lunar",
+      "type": "string"
+     },
+     {
+      "name": "eojeol_body",
+      "type": "integer",
+      "description": "날씨 기록·역자 층을 뺀 본문 층 어절 수"
+     },
+     {
+      "name": "eojeol_with_weather",
+      "type": "integer"
+     },
+     {
+      "name": "weather_record",
+      "type": "string"
+     },
+     {
+      "name": "translator_layer_marks",
+      "type": "integer",
+      "description": "괄호 보충어·역주 표지 수(역자 층)"
+     },
+     {
+      "name": "v1_상실",
+      "type": "integer"
+     },
+     {
+      "name": "v1_분노",
+      "type": "integer"
+     },
+     {
+      "name": "v1_의지",
+      "type": "integer"
+     },
+     {
+      "name": "v1_해소",
+      "type": "integer"
+     },
+     {
+      "name": "v1_total",
+      "type": "integer"
+     },
+     {
+      "name": "v1_density_per100",
+      "type": "number"
+     },
+     {
+      "name": "v2_불안",
+      "type": "integer"
+     },
+     {
+      "name": "v2_total",
+      "type": "integer"
+     },
+     {
+      "name": "annotator",
+      "type": "string"
+     },
+     {
+      "name": "confidence",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "data-provenance-sources",
+   "path": "data/provenance/sources.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC0-1.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "source_id",
+      "type": "string",
+      "description": "data/provenance/sources.csv의 출처 ID"
+     },
+     {
+      "name": "text",
+      "type": "string"
+     },
+     {
+      "name": "translation",
+      "type": "string"
+     },
+     {
+      "name": "translator",
+      "type": "string"
+     },
+     {
+      "name": "year",
+      "type": "integer"
+     },
+     {
+      "name": "publisher",
+      "type": "string"
+     },
+     {
+      "name": "base_text",
+      "type": "string",
+      "description": "날짜별 저본(초고본·일기초·전서본). 전체 구축에서 기입"
+     },
+     {
+      "name": "rights",
+      "type": "string"
+     },
+     {
+      "name": "role_in_study",
+      "type": "string"
+     },
+     {
+      "name": "scan_pages",
+      "type": "integer"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-bootstrap_ci",
+   "path": "aggregates/bootstrap_ci.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "comparison",
+      "type": "string"
+     },
+     {
+      "name": "unit",
+      "type": "string"
+     },
+     {
+      "name": "resamples",
+      "type": "integer"
+     },
+     {
+      "name": "dictionary",
+      "type": "string"
+     },
+     {
+      "name": "ratio",
+      "type": "number"
+     },
+     {
+      "name": "ci95_low",
+      "type": "number"
+     },
+     {
+      "name": "ci95_high",
+      "type": "string"
+     },
+     {
+      "name": "share_undefined",
+      "type": "number"
+     },
+     {
+      "name": "note",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-competency_questions",
+   "path": "aggregates/competency_questions.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "qid",
+      "type": "string"
+     },
+     {
+      "name": "question",
+      "type": "string"
+     },
+     {
+      "name": "answer",
+      "type": "string"
+     },
+     {
+      "name": "n",
+      "type": "integer"
+     },
+     {
+      "name": "source",
+      "type": "string"
+     },
+     {
+      "name": "note",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-conditions_table",
+   "path": "aggregates/conditions_table.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "condition",
+      "type": "string"
+     },
+     {
+      "name": "NJ1597_hits",
+      "type": "integer"
+     },
+     {
+      "name": "NJ1597_eojeol",
+      "type": "integer"
+     },
+     {
+      "name": "NJ1597_density",
+      "type": "number"
+     },
+     {
+      "name": "IL18A_hits",
+      "type": "integer"
+     },
+     {
+      "name": "IL18A_eojeol",
+      "type": "integer"
+     },
+     {
+      "name": "IL18A_density",
+      "type": "number"
+     },
+     {
+      "name": "IL18B_hits",
+      "type": "integer"
+     },
+     {
+      "name": "IL18B_eojeol",
+      "type": "integer"
+     },
+     {
+      "name": "IL18B_density",
+      "type": "number"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-epithet_retention_book18",
+   "path": "aggregates/epithet_retention_book18.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "A_epithet_lines",
+      "type": "integer"
+     },
+     {
+      "name": "B_epithet_lines",
+      "type": "integer"
+     },
+     {
+      "name": "A_lines_retained_in_B(±1행)",
+      "type": "integer"
+     },
+     {
+      "name": "retention_percent",
+      "type": "number"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-iliad18_bins50",
+   "path": "aggregates/iliad18_bins50.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "range_line_in_translation",
+      "type": "string"
+     },
+     {
+      "name": "A_emo_v1",
+      "type": "integer"
+     },
+     {
+      "name": "A_eojeol",
+      "type": "integer"
+     },
+     {
+      "name": "A_density",
+      "type": "number"
+     },
+     {
+      "name": "B_emo_v1",
+      "type": "integer"
+     },
+     {
+      "name": "B_eojeol",
+      "type": "integer"
+     },
+     {
+      "name": "B_density",
+      "type": "number"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-monthly_density_1597",
+   "path": "aggregates/monthly_density_1597.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "month_lunar",
+      "type": "integer"
+     },
+     {
+      "name": "emotion_words_v1",
+      "type": "integer"
+     },
+     {
+      "name": "eojeol_body",
+      "type": "integer",
+      "description": "날씨 기록·역자 층을 뺀 본문 층 어절 수"
+     },
+     {
+      "name": "density_per100",
+      "type": "number"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-ocr_disagreement",
+   "path": "aggregates/ocr_disagreement.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "target",
+      "type": "string"
+     },
+     {
+      "name": "unit",
+      "type": "string"
+     },
+     {
+      "name": "measure",
+      "type": "string"
+     },
+     {
+      "name": "value_percent",
+      "type": "number"
+     },
+     {
+      "name": "note",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "aggregates-witness_deviation_examples",
+   "path": "aggregates/witness_deviation_examples.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "unit",
+      "type": "string"
+     },
+     {
+      "name": "emo_1",
+      "type": "integer"
+     },
+     {
+      "name": "emo_2",
+      "type": "integer"
+     },
+     {
+      "name": "density_1",
+      "type": "number"
+     },
+     {
+      "name": "density_2",
+      "type": "number"
+     },
+     {
+      "name": "main_category_match",
+      "type": "string"
+     },
+     {
+      "name": "jaccard",
+      "type": "number"
+     }
+    ]
+   }
+  },
+  {
+   "name": "annotations-agreement_sample_ids",
+   "path": "annotations/agreement_sample_ids.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "order",
+      "type": "string"
+     },
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "date_lunar",
+      "type": "string"
+     },
+     {
+      "name": "section",
+      "type": "string"
+     },
+     {
+      "name": "book_page",
+      "type": "integer"
+     },
+     {
+      "name": "role",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "annotations-pilot_1597_key_entries",
+   "path": "annotations/pilot_1597_key_entries.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "date_lunar",
+      "type": "string"
+     },
+     {
+      "name": "summary_by_researcher",
+      "type": "string"
+     },
+     {
+      "name": "auto_tag_v1(category)",
+      "type": "string"
+     },
+     {
+      "name": "researcher_judgment_prelim",
+      "type": "string"
+     },
+     {
+      "name": "annotator",
+      "type": "string"
+     },
+     {
+      "name": "confidence",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "lexicon-emotion_lexicon_v1",
+   "path": "lexicon/emotion_lexicon_v1.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "lemma",
+      "type": "string"
+     },
+     {
+      "name": "sub_emotion",
+      "type": "string"
+     },
+     {
+      "name": "category",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "lexicon-emotion_lexicon_v2",
+   "path": "lexicon/emotion_lexicon_v2.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "lemma",
+      "type": "string"
+     },
+     {
+      "name": "sub_emotion",
+      "type": "string"
+     },
+     {
+      "name": "category",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "lexicon-epithet_patterns_ko",
+   "path": "lexicon/epithet_patterns_ko.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "pattern_regex",
+      "type": "string"
+     },
+     {
+      "name": "remove_as_repetition",
+      "type": "string"
+     },
+     {
+      "name": "tag_epithet_line",
+      "type": "string"
+     },
+     {
+      "name": "note",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "lexicon-proper_names",
+   "path": "lexicon/proper_names.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "id",
+      "type": "string"
+     },
+     {
+      "name": "headword",
+      "type": "string"
+     },
+     {
+      "name": "variants",
+      "type": "string"
+     },
+     {
+      "name": "confusable_forms",
+      "type": "string"
+     },
+     {
+      "name": "note",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "docs-correction_log_template",
+   "path": "docs/correction_log_template.csv",
+   "format": "csv",
+   "encoding": "utf-8-sig",
+   "licenses": [
+    {
+     "name": "CC-BY-4.0"
+    }
+   ],
+   "schema": {
+    "fields": [
+     {
+      "name": "log_id",
+      "type": "string"
+     },
+     {
+      "name": "date",
+      "type": "string"
+     },
+     {
+      "name": "record_id",
+      "type": "string",
+      "description": "레코드 ID(ASCII). NJ-연도-[L]월일[-I|-II]-순번 / IL-권-행-A|B"
+     },
+     {
+      "name": "error_type",
+      "type": "string"
+     },
+     {
+      "name": "before_summary",
+      "type": "string"
+     },
+     {
+      "name": "after_summary",
+      "type": "string"
+     },
+     {
+      "name": "evidence",
+      "type": "string"
+     },
+     {
+      "name": "decided_by",
+      "type": "string"
+     },
+     {
+      "name": "data_version",
+      "type": "string"
+     }
+    ]
+   }
+  }
+ ]
+}

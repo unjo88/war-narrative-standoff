@@ -1,0 +1,56 @@
+@prefix wn:   <https://github.com/unjo88/war-narrative-standoff/ontology#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+wn: a owl:Ontology ; rdfs:label "고전 전쟁 서사 스탠드오프 온톨로지 v0.1"@ko ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
+# ---- 기록 클래스
+wn:Record    a owl:Class ; rdfs:label "레코드"@ko ; rdfs:comment "번역본의 문장 단위. 본문은 공개하지 않고 좌표만 담는다."@ko .
+wn:Witness   a owl:Class ; rdfs:label "증언"@ko .
+wn:Variance  a owl:Class ; rdfs:label "증언 간 편차"@ko .
+# ---- 내용 클래스
+wn:Event     a owl:Class ; rdfs:label "사건"@ko .
+wn:Agent     a owl:Class ; rdfs:label "행위자"@ko .
+wn:Place     a owl:Class ; rdfs:label "장소"@ko .
+wn:Emotion   a owl:Class ; rdfs:label "정서"@ko .
+wn:Strategy  a owl:Class ; rdfs:label "전략"@ko .
+wn:Artifact  a owl:Class ; rdfs:label "사물"@ko .
+
+# ---- 관계
+wn:describes   a owl:ObjectProperty ; rdfs:domain wn:Record ; rdfs:range wn:Event ; rdfs:label "기술한다"@ko .
+wn:hasAgent    a owl:ObjectProperty ; rdfs:domain wn:Event ; rdfs:range wn:Agent ; rdfs:label "참여한다"@ko .
+wn:belongsTo   a owl:ObjectProperty ; rdfs:domain wn:Record ; rdfs:range wn:Witness ; rdfs:label "속한다"@ko .
+wn:Expression a owl:Class ; rdfs:label "정서 표현"@ko ; rdfs:comment "'행위자가 레코드에서 정서를 드러낸다'를 담는 n항 관계 노드"@ko .
+wn:agent   a owl:ObjectProperty ; rdfs:domain wn:Expression ; rdfs:range wn:Agent .
+wn:emotion a owl:ObjectProperty ; rdfs:domain wn:Expression ; rdfs:range wn:Emotion .
+wn:inRecord    a owl:ObjectProperty ; rdfs:range wn:Record .
+wn:varianceBetween a owl:ObjectProperty ; rdfs:domain wn:Variance ; rdfs:range wn:Record ; rdfs:label "증언 간 편차"@ko .
+wn:lunarDate   a owl:DatatypeProperty ; rdfs:range xsd:string .
+wn:bookLine    a owl:DatatypeProperty ; rdfs:range xsd:string .
+wn:bookPage    a owl:DatatypeProperty ; rdfs:range xsd:integer .
+
+# ---- 정서 범주(사전 v1·v2)
+wn:Loss a wn:Emotion ; rdfs:label "상실"@ko .   wn:Grief a wn:Emotion ; rdfs:label "비탄"@ko ; rdfs:subClassOf wn:Loss .
+wn:SelfBlame a wn:Emotion ; rdfs:label "자책"@ko ; rdfs:subClassOf wn:Loss .
+wn:Anger a wn:Emotion ; rdfs:label "분노"@ko .  wn:Resolve a wn:Emotion ; rdfs:label "의지"@ko .
+wn:Relief a wn:Emotion ; rdfs:label "해소"@ko . wn:Anxiety a wn:Emotion ; rdfs:label "불안"@ko .
+
+# ---- 예시 인스턴스(시범 구축)
+wn:S-NJ-01-II a wn:Witness ; rdfs:label "노승석 역(정유일기Ⅱ)"@ko .
+wn:S-IL-A a wn:Witness ; rdfs:label "천병희 역(2007)"@ko .
+wn:P-0001 a wn:Agent ; rdfs:label "李舜臣"@ko .
+wn:P-0312 a wn:Agent ; rdfs:label "李葂"@ko .
+wn:P-1001 a wn:Agent ; rdfs:label "Achilleus" .
+wn:E-1597-07 a wn:Event ; rdfs:label "아들 전사"@ko ; wn:hasAgent wn:P-0312 .
+wn:NJ-1597-1014-II-01 a wn:Record ; wn:describes wn:E-1597-07 ; wn:belongsTo wn:S-NJ-01-II ;
+    wn:lunarDate "1597-10-14" ; wn:bookPage 405 .
+[] a wn:Expression ; wn:agent wn:P-0001 ; wn:emotion wn:Grief ; wn:inRecord wn:NJ-1597-1014-II-01 .
+wn:IL-18-022-A a wn:Record ; wn:belongsTo wn:S-IL-A ; wn:bookLine "18.22-35" .
+[] a wn:Expression ; wn:agent wn:P-1001 ; wn:emotion wn:Grief ; wn:inRecord wn:IL-18-022-A .
+wn:V-1597-0914 a wn:Variance ; wn:varianceBetween wn:NJ-1597-0914-I-01 , wn:NJ-1597-0914-II-01 ;
+    rdfs:comment "정서 범주 불일치(Ⅰ 없음 / Ⅱ 분노·통분)"@ko .

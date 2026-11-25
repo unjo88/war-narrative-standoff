@@ -1,0 +1,24 @@
+{
+ "data_version": "v0.1-pilot",
+ "python": "3.13.18",
+ "kiwipiepy": "0.25.1",
+ "korean_lunar_calendar": "0.4.0",
+ "lexicon_sha256": {
+  "emotion_lexicon_v1.csv": "ef8f23882258bba9",
+  "emotion_lexicon_v2.csv": "c5cd98d882c41560",
+  "epithet_patterns_ko.csv": "9a97fdf03263294f",
+  "proper_names.csv": "7b73d00889803f68"
+ },
+ "iliad_B_line_offsets": {
+  "1": 2,
+  "6": -1,
+  "7": 1,
+  "8": -2,
+  "9": -4,
+  "11": 1,
+  "13": -1,
+  "16": 1,
+  "18": -1,
+  "19": -1
+ }
+}
