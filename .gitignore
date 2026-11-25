@@ -1,0 +1,19 @@
+# 번역문이 든 작업 코퍼스와 스캔·OCR 원본은 절대 올리지 않는다
+corpus/
+scans/
+ocr/
+*.pdf
+*.tif
+*.tiff
+merged_*.json
+*_bbox.html
+__pycache__/
+.DS_Store
+
+# 대조 보고서(내 코퍼스 정보 포함)
+match_report.csv
+.pytest_cache/
+
+# 일치도 측정: 태깅 전에는 층 정보가 든 표본대장과 작성 중인 시트를 올리지 않는다
+*태깅시트*.xlsx
+표본대장*.xlsx
